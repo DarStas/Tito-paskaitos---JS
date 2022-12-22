@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: bisque;
+}
+
+.main-container {
+    padding: 20px;
+    display: flex;
+}
+
+.left-side,
+.right-side {
+    padding: 10px;
+    flex: 1;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+}
+
+.change-window {
+    margin-bottom: 10px;
+}
+
+.budget,
+.expenses {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgb(224, 216, 216);
+    display: flex;
+    flex-direction: column;
+}
+
+.expenses {
+    display: none;
+}
+
+.budget > *,
+.expenses > * {
+    margin-bottom: 5px;
+}
+
+.expenses > * {
+    display: flex;
+    flex-direction: column;
+}
+
+.expenses-list > .expense-container {
+    padding: 10px;
+    background-color: rgb(224, 216, 216);
+}
