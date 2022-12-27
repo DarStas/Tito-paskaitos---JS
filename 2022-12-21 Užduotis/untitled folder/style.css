@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: bisque;
+}
+
+.wrapper {
+
+    display: flex;
+}
+
+.wrapper div {
+    margin: 200px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container input,
+select {
+    margin-bottom: 20px;
+}
+
+.result {
+    height: 300px;
+    width: 300px;
+    background-color: white;
+}
