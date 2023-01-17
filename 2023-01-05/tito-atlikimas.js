@@ -23,7 +23,7 @@ const checkIsPrime = (number) => {
             return true;
         }
     
-        if (number % x - 1 === 0) {
+        if (number % (x - 1) === 0) {
             return false;
         }
 
@@ -33,7 +33,7 @@ const checkIsPrime = (number) => {
     return testNumber(number);
 }
 
-console.log(checkIsPrime(2))
+console.log(checkIsPrime(5))
 
 
 createLineSeperator(3)
@@ -66,3 +66,70 @@ const convertCurrency = (valueToConvert, convertTo) => {
 }
 
 console.log(convertCurrency("€10", "dollars"));
+
+createLineSeperator(4)
+
+const startEngine = (onSuccess, onFail) => {
+    const engineStarted = false;
+
+    engineStarted ? onSuccess() : onFail();
+
+    // if (engineStarted) {
+    //     onSuccess();
+    // } else {
+    //     onFail();
+    // }
+}
+
+const onSuccess = () => {
+    console.log("Engine strated.");
+}
+
+const onFail = () => {
+    console.log("Engine failed to start.");
+}
+
+startEngine(onSuccess, onFail);
+
+createLineSeperator(5)
+
+const convertFahrenheitToCelcius = (fahrenheit) => {
+    return Math.floor(fahrenheit - 32) * 0.5556
+}
+
+console.log(convertFahrenheitToCelcius(50));
+
+createLineSeperator(6)
+
+const getAreaOfRectangle = (x, y,) => {
+    return x * y;
+}
+
+console.log(getAreaOfRectangle(2, 2));
+
+createLineSeperator(7)
+
+const getCircleAreaAndPerimeter = (radius) => {
+    const perimeter = Math.floor((2 * Math.PI * radius) * 100) / 100;
+    const area = Math.floor((Math.PI * Math.pow(radius, 2)) * 100) / 100;
+
+    return `Circle of radius ${radius} has perimeter of ${perimeter} and area of ${area};`
+}
+
+console.log(getCircleAreaAndPerimeter(10));
+
+createLineSeperator(8)
+
+// const getRandomNumber = (min, max) => {
+//     return Math.random();
+// }
+
+const getFactorial = (number) => {
+    if (number <= 1) {
+        return 1;
+    }
+
+    return number * getFactorial(number - 1);
+}
+
+console.log(getFactorial(5));
