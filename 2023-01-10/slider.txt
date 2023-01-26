@@ -1,0 +1,19 @@
+Create a html container that changes its image and information based on users feedback
+Acceptance criteria:
+    1. Our application should be modular, array of feedbacks should be declared outside of main.js
+    2. Feedback should rotate in cycles by changing each feedback every 3 seconds so if we would have two feedbacks it should show
+        first feedback, then second and then should return to first one and cycle continues.
+
+ 
+
+type="module"
+
+[21:04] Titas Partikas
+feedback apačios spalva: DarkSlateGrey
+
+[21:04] Titas Partikas
+feedback viršaus spalva: FloralWhite
+
+[21:05] Titas Partikas
+aplikacijos background-color: azure
+
