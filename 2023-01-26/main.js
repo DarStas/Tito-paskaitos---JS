@@ -1,14 +1,15 @@
 const dataContainer = document.querySelector("#data");
 const input = document.querySelector("#input");
 const btn = document.querySelector("#btn");
+const localStorageKey = "userNames";
 
 btn.addEventListener("click", () => {
     dataContainer.textContent += dataContainer.textContent ? `, ${input.value}` : input.value;
     const dataToStore = JSON.stringify([{name: "name" }]);
-    window.localStorage.setItem("userNames", dataToStore);
+    window.localStorage.setItem(localStorageKey, dataToStore);
 })
 
-const userNames = window.localStorage.getItem("userNames");
+const userNames = window.localStorage.getItem(localStorageKey);
 console.log(JSON.parse(userNames));
 if (userNames) {
     dataContainer.textContent = userNames;
